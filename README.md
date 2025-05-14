@@ -2,6 +2,7 @@
 
 > ⚠️ **Academic Integrity Notice**  
 > This repository contains only a very small subset of the full text corpus originally used, in order to comply with university academic integrity policies.
+> Commit history exists in a separate, private repository to protect text corpus
 
 ---
 
