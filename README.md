@@ -11,7 +11,7 @@
 This is a custom-built information retrieval engine that processes a corpus of documents and ranks them based on query relevance. It implements several key IR techniques including:
 
 - **Inverted Index construction**
-- **Okapi BM25** scoring
+- **Okapi BM25 scoring**
 - **Cosine-Similarity-based PageRank**
 - **Delta Compression via Gamma Encoding**
 - **Lightweight Stemming using Regex**
@@ -45,11 +45,11 @@ source .venv/bin/activate
 
 ## Usage
 To launch the query engine, run:
-```python
+```bash
 python engine_query.py
 ```
 You will be prompted with:
-```bash
+```text
 QUERY:
 ```
 🕒 First run will trigger preprocessing (~30–50 seconds). All future runs will load from serialized .pkl files if present.
@@ -64,7 +64,7 @@ After decompressing serialized .pkl files, query precision may drop. This appear
 ---
 
 ## 🧠 Technical Highlights
-BM25 Scoring
+### BM25 Scoring
 BM25 is used to rank query-document matches using:
 
 ```bash
@@ -78,7 +78,7 @@ avgdl = average document length
 k1 = 1.2, b = 0.75 (tunables)
 ```
 
-Cosine Similarity PageRank
+### Cosine Similarity PageRank
 Cosine similarity is used to build a semantic graph of documents (top-K neighbors per doc). PageRank is applied to this graph:
 ```bash
 R(t+1) = d * M * R(t) + (1 - d)/N
